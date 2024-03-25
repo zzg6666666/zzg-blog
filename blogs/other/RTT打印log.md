@@ -143,3 +143,7 @@ s(base) zzg@192 ~ % pyocd rtt -t STM32F103C8
 Hello world!
 Hello world!
 ```
+
+## 缺点
+
+进行debug或者刷写时，与打印log冲突，只能二选一。
