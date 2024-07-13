@@ -1,10 +1,13 @@
 import { defineUserConfig } from "vuepress";
-import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
   title: "zzgのblog",
   description: "Just playing around",
+  bundler: viteBundler(),
+  // bundler: webpackBundler(),
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
@@ -29,8 +32,8 @@ export default defineUserConfig({
     },
     navbar: [
       { text: "Home", link: "/" },
-      { text: "Categories", link: "/categories/other/1/" },
-      { text: "Tags", link: "/tags/tag1/1/" },
+      { text: "Categories", link: "/categories/stm32/1" },
+      { text: "Tags", link: "/tags/uart/1" },
       // {
       //   text: "Docs",
       //   children: [
